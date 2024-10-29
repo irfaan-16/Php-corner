@@ -1,0 +1,91 @@
+:root {
+  --background: #c23c8670;
+  --navbar-width: 256px;
+  --navbar-width-min: 80px;
+  --navbar-dark-primary: #18283b;
+  --navbar-dark-secondary: #2c3e50;
+  --navbar-light-primary: #f5f6fa;
+  --navbar-light-secondary: #8392a5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  min-height: 100vh;
+  background: var(--navbar-dark-primary);
+}
+span {
+  pointer-events: none;
+}
+.navbar {
+  color: white;
+  background: var(--background);
+  width: max-content;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0 0 1rem;
+  transform: translate(2%, 5%);
+}
+.navbar .navHeader {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.178);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.navButton {
+  font-weight: bold;
+  padding: 0.8rem;
+  background: rgba(0, 0, 0, 0.226);
+  cursor: pointer;
+  border-radius: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+main {
+  display: flex;
+  padding-top: 4rem;
+  gap: 3rem;
+  color: white;
+}
+
+.container {
+  background: #00000018;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 100%;
+}
+.container > h1 {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(220, 220, 220, 0.356);
+  width: max-content;
+}
+.container > p {
+  font-size: 1.2rem;
+}
+.topics {
+  margin-top: 2rem;
+}
+.topic {
+  background: #00000048;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.topic p {
+  margin: 1rem 0;
+}
+
+.textarea{
+    background: transparent;
+    height: fit-content;
+}
+.snippet{
+    padding: 1rem;
+    border-radius: .5rem;
+    background: #00000075;
+}

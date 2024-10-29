@@ -1,0 +1,283 @@
+{
+  "Introduction": {
+    "description": "PHP (Hypertext Preprocessor) is a widely-used, open-source server-side scripting language suited for web development. PHP scripts are executed on the server and generate HTML that is sent to the client.",
+    "topics": [
+      {
+        "title": "What is PHP?",
+        "content": "PHP is embedded within HTML, allowing dynamic content creation on web pages. It can handle forms, connect to databases, work with cookies, and manage files on the server.",
+        "example": "<?php\n  echo 'Hello, PHP!';\n?>"
+      },
+      {
+        "title": "PHP Versions",
+        "content": "PHP has evolved significantly, with version 8.x introducing just-in-time compilation and enhanced error handling. Versions older than 7.x are generally considered obsolete."
+      },
+      {
+        "title": "Features of PHP",
+        "content": "PHP supports multiple databases, offers cross-platform support, and includes built-in functions for security and performance optimization."
+      },
+      {
+        "title": "History of PHP",
+        "content": "PHP was created by Rasmus Lerdorf in 1993 and has undergone numerous updates, leading to its current widespread use in web development."
+      }
+    ]
+  },
+  "Installation": {
+    "description": "Setting up PHP involves installing a server environment (Apache) and a database (MySQL) using software like XAMPP, MAMP, or LAMP.",
+    "topics": [
+      {
+        "title": "Installing XAMPP",
+        "content": "XAMPP is a cross-platform server environment that includes Apache, MySQL, and PHP. Download and install from Apache Friends, then start the Apache and MySQL modules to run PHP locally.",
+        "example": "Download XAMPP, install it, and start Apache from the XAMPP control panel."
+      },
+      {
+        "title": "Testing the Installation",
+        "content": "To verify PHP is installed, create a 'test.php' file with PHP code in the 'htdocs' folder and access it via localhost.",
+        "example": "<?php\n  phpinfo();\n?>"
+      },
+      {
+        "title": "Setting Up a Local Server",
+        "content": "After installation, navigate to http://localhost/ to access your local server and test PHP scripts."
+      },
+      {
+        "title": "Common Errors During Installation",
+        "content": "Users may encounter issues like Apache not starting or PHP not processing files. Common fixes include checking port availability and configuration settings."
+      }
+    ]
+  },
+  "Basic Syntax": {
+    "description": "PHP syntax includes using tags <?php ... ?> to embed PHP code within HTML, with semicolons (;) ending each statement.",
+    "topics": [
+      {
+        "title": "PHP Tags",
+        "content": "PHP code starts and ends with <?php and ?> tags, allowing you to embed code in HTML files.",
+        "example": "<?php\n  echo 'Hello, World!';\n?>"
+      },
+      {
+        "title": "Comments",
+        "content": "Comments in PHP use // or /*...*/ for single-line and multi-line comments respectively.",
+        "example": "<?php\n  // Single-line comment\n  /* Multi-line \n   comment */\n?>"
+      },
+      {
+        "title": "Whitespace",
+        "content": "Whitespace is ignored in PHP, allowing flexibility in formatting code for readability."
+      },
+      {
+        "title": "Case Sensitivity",
+        "content": "PHP variable names are case-sensitive. For example, $Var and $var are considered different variables."
+      }
+    ]
+  },
+  "Variables": {
+    "description": "Variables in PHP start with $ and can store various data types. PHP is loosely typed, meaning variables do not need a specified type.",
+    "topics": [
+      {
+        "title": "Declaring Variables",
+        "content": "Variables in PHP are case-sensitive and are declared with a $ symbol.",
+        "example": "<?php\n  $name = 'John';\n  $age = 25;\n  echo $name . ' is ' . $age . ' years old.';\n?>"
+      },
+      {
+        "title": "Variable Scope",
+        "content": "PHP supports local, global, and static scopes for variables, determining where a variable is accessible.",
+        "example": "<?php\n  $globalVar = 'I am global';\n  function myFunction() {\n    global $globalVar;\n    echo $globalVar;\n  }\n  myFunction();\n?>"
+      },
+      {
+        "title": "Data Types",
+        "content": "PHP supports several data types including strings, integers, floats, booleans, arrays, and objects.",
+        "example": "<?php\n  $float = 3.14;\n  $isTrue = true;\n?>"
+      },
+      {
+        "title": "Superglobals",
+        "content": "PHP has built-in superglobal variables like $_GET, $_POST, $_SESSION, and $_COOKIE for handling data across different contexts."
+      }
+    ]
+  },
+  "Functions": {
+    "description": "Functions are reusable blocks of code that perform a specific task. Functions can accept parameters and return values.",
+    "topics": [
+      {
+        "title": "Defining Functions",
+        "content": "Functions are defined using the 'function' keyword followed by a name, and can be called anywhere after they are defined.",
+        "example": "<?php\n  function greet() {\n    echo 'Hello, World!';\n  }\n  greet();\n?>"
+      },
+      {
+        "title": "Function Parameters",
+        "content": "Functions can accept parameters for additional input.",
+        "example": "<?php\n  function greet($name) {\n    echo 'Hello, ' . $name;\n  }\n  greet('Alice');\n?>"
+      },
+      {
+        "title": "Return Values",
+        "content": "Functions can return values using the 'return' keyword.",
+        "example": "<?php\n  function add($a, $b) {\n    return $a + $b;\n  }\n  echo add(5, 3);\n?>"
+      },
+      {
+        "title": "Anonymous Functions",
+        "content": "PHP allows for anonymous functions (closures) that can be assigned to variables.",
+        "example": "<?php\n  $sum = function($a, $b) {\n    return $a + $b;\n  };\n  echo $sum(2, 3);\n?>"
+      },
+      {
+        "title": "Function Overloading",
+        "content": "PHP does not support function overloading natively but can achieve similar results using variable arguments with ... (splat operator).",
+        "example": "<?php\n  function add(...$numbers) {\n    return array_sum($numbers);\n  }\n  echo add(1, 2, 3, 4);\n?>"
+      }
+    ]
+  },
+  "Strings": {
+    "description": "Strings are sequences of characters. PHP offers numerous functions to manipulate strings.",
+    "topics": [
+      {
+        "title": "String Concatenation",
+        "content": "Use the '.' operator to join strings together.",
+        "example": "<?php\n  $greeting = 'Hello' . ', ' . 'World!';\n  echo $greeting;\n?>"
+      },
+      {
+        "title": "String Functions",
+        "content": "PHP provides functions like strlen(), strtoupper(), strtolower(), substr(), and str_replace() to manipulate strings.",
+        "example": "<?php\n  $text = 'Hello PHP';\n  echo strlen($text); // Output: 9\n  echo strtoupper($text); // Output: HELLO PHP\n?>"
+      },
+      {
+        "title": "Finding Substrings",
+        "content": "Use strpos() to find the position of a substring within a string.",
+        "example": "<?php\n  $text = 'Find the position';\n  echo strpos($text, 'position'); // Output: 10\n?>"
+      },
+      {
+        "title": "String Formatting",
+        "content": "Use sprintf() or printf() to format strings with variables.",
+        "example": "<?php\n  $name = 'John';\n  $age = 25;\n  printf('%s is %d years old.', $name, $age);\n?>"
+      }
+    ]
+  },
+  "Arrays": {
+    "description": "An array is a data structure that stores multiple values in a single variable.",
+    "topics": [
+      {
+        "title": "Indexed Arrays",
+        "content": "Elements are accessed via numerical indexes, starting at 0.",
+        "example": "<?php\n  $fruits = array('apple', 'banana', 'cherry');\n  echo $fruits[1]; // Output: banana\n?>"
+      },
+      {
+        "title": "Associative Arrays",
+        "content": "Use string keys instead of numeric indices to store values.",
+        "example": "<?php\n  $ages = array('Peter' => 32, 'John' => 28);\n  echo $ages['Peter']; // Output: 32\n?>"
+      },
+      {
+        "title": "Multidimensional Arrays",
+        "content": "Arrays that contain arrays as elements, creating complex structures.",
+        "example": "<?php\n  $matrix = array(\n    array(1, 2, 3),\n    array(4, 5, 6),\n    array(7, 8, 9)\n  );\n  echo $matrix[1][2]; // Output: 6\n?>"
+      },
+      {
+        "title": "Array Functions",
+        "content": "PHP provides built-in functions like array_push(), array_pop(), array_merge(), and array_slice() to manipulate arrays.",
+        "example": "<?php\n  $array = array(1, 2, 3);\n  array_push($array, 4);\n  print_r($array);\n?>"
+      },
+      {
+        "title": "Sorting Arrays",
+        "content": "Use sort(), rsort(), asort(), and ksort() to sort arrays in different ways.",
+        "example": "<?php\n  $numbers = array(3, 2, 1);\n  sort($numbers);\n  print_r($numbers);\n?>"
+      }
+    ]
+  },
+  "Forms": {
+    "description": "PHP can collect form data and handle it on the server.",
+    "topics": [
+      {
+        "title": "GET vs POST",
+        "content": "GET and POST methods are used to submit forms, with GET showing data in the URL and POST keeping it hidden.",
+        "example": "<form method='post'>\n  <input type='text' name='username'>\n  <input type='submit'>\n</form>"
+      },
+      {
+        "title": "Form Handling",
+        "content": "Use the $_GET and $_POST arrays to retrieve submitted form data.",
+        "example": "<?php\n  if ($_SERVER['REQUEST_METHOD'] == 'POST') {\n    $username = $_POST['username'];\n    echo 'Hello, ' . $username;\n  }\n?>"
+      },
+      {
+        "title": "Validating Form Data",
+        "content": "Always validate and sanitize user input to prevent security vulnerabilities.",
+        "example": "<?php\n  $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);\n?>"
+      },
+      {
+        "title": "File Uploads",
+        "content": "PHP can handle file uploads through forms using the enctype='multipart/form-data'.",
+        "example": "<form method='post' enctype='multipart/form-data'>\n  <input type='file' name='file'>\n  <input type='submit'>\n</form>"
+      }
+    ]
+  },
+  "Database Connectivity": {
+    "description": "PHP can interact with databases, commonly using MySQLi or PDO for database management.",
+    "topics": [
+      {
+        "title": "Connecting to a Database",
+        "content": "Use mysqli_connect() or PDO to establish a connection to a MySQL database.",
+        "example": "<?php\n  $conn = new mysqli('localhost', 'username', 'password', 'database');\n  if ($conn->connect_error) {\n    die('Connection failed: ' . $conn->connect_error);\n  }\n?>"
+      },
+      {
+        "title": "Executing SQL Queries",
+        "content": "Use SQL commands within PHP to interact with databases.",
+        "example": "<?php\n  $sql = 'SELECT * FROM users';\n  $result = $conn->query($sql);\n  while ($row = $result->fetch_assoc()) {\n    echo 'User: ' . $row['username'] . '\\n';\n  }\n?>"
+      },
+      {
+        "title": "Prepared Statements",
+        "content": "Use prepared statements to prevent SQL injection attacks.",
+        "example": "<?php\n  $stmt = $conn->prepare('SELECT * FROM users WHERE id = ?');\n  $stmt->bind_param('i', $id);\n  $stmt->execute();\n?>"
+      },
+      {
+        "title": "Error Handling",
+        "content": "Check for errors in database operations to ensure proper handling of issues.",
+        "example": "<?php\n  if ($result === FALSE) {\n    echo 'Error: ' . $conn->error;\n  }\n?>"
+      }
+    ]
+  },
+  "Cookies": {
+    "description": "Cookies are small files stored on the client's machine to retain information across sessions.",
+    "topics": [
+      {
+        "title": "Setting a Cookie",
+        "content": "Use the setcookie() function to set a cookie.",
+        "example": "<?php\n  setcookie('user', 'John', time() + (86400 * 30), '/');\n?>"
+      },
+      {
+        "title": "Retrieving a Cookie",
+        "content": "Cookies are accessed via the $_COOKIE array.",
+        "example": "<?php\n  if (isset($_COOKIE['user'])) {\n    echo 'User is ' . $_COOKIE['user'];\n  }\n?>"
+      },
+      {
+        "title": "Deleting a Cookie",
+        "content": "To delete a cookie, set its expiration date to a time in the past.",
+        "example": "<?php\n  setcookie('user', '', time() - 3600);\n?>"
+      },
+      {
+        "title": "Cookie Security",
+        "content": "Always set the secure and httponly flags on cookies to enhance security."
+      }
+    ]
+  },
+  "File System": {
+    "description": "PHP allows for file handling, including reading from and writing to files on the server.",
+    "topics": [
+      {
+        "title": "Reading a File",
+        "content": "Use fopen() and fread() functions to read from a file.",
+        "example": "<?php\n  $file = fopen('file.txt', 'r');\n  $content = fread($file, filesize('file.txt'));\n  fclose($file);\n  echo $content;\n?>"
+      },
+      {
+        "title": "Writing to a File",
+        "content": "Use fwrite() to write data to a file.",
+        "example": "<?php\n  $file = fopen('file.txt', 'w');\n  fwrite($file, 'Hello World');\n  fclose($file);\n?>"
+      },
+      {
+        "title": "File Uploads",
+        "content": "PHP can handle file uploads from users.",
+        "example": "<?php\n  if ($_FILES['file']['error'] == UPLOAD_ERR_OK) {\n    move_uploaded_file($_FILES['file']['tmp_name'], 'uploads/' . $_FILES['file']['name']);\n  }\n?>"
+      },
+      {
+        "title": "File Permissions",
+        "content": "Ensure that file permissions are correctly set to prevent unauthorized access.",
+        "example": "<?php\n  chmod('file.txt', 0644);\n?>"
+      },
+      {
+        "title": "Directory Handling",
+        "content": "Use functions like opendir(), readdir(), and closedir() to work with directories.",
+        "example": "<?php\n  $dir = opendir('.');\n  while ($file = readdir($dir)) {\n    echo $file . '\\n';\n  }\n  closedir($dir);\n?>"
+      }
+    ]
+  }
+}
