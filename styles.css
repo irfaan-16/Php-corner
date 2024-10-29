@@ -16,19 +16,20 @@
 }
 body {
   min-height: 100vh;
-  background: var(--navbar-dark-primary);
+  background: rgb(21, 20, 25);
 }
 span {
   pointer-events: none;
 }
 .navbar {
   color: white;
-  background: var(--background);
+  background: rgba(133, 57, 248, 0.541);
   width: max-content;
   padding: 1rem;
   border-radius: 0.5rem;
   margin: 1rem 0 0 1rem;
-  transform: translate(2%, 5%);
+  position: sticky;
+  top: 4.5rem;
 }
 .navbar .navHeader {
   border-bottom: 2px solid rgba(255, 255, 255, 0.178);
@@ -43,6 +44,11 @@ span {
   cursor: pointer;
   border-radius: 0.3rem;
   margin-bottom: 0.5rem;
+  transition: 0.3s ease;
+}
+.navButton:hover {
+  background-color: white;
+  color: black;
 }
 
 main {
@@ -50,6 +56,7 @@ main {
   padding-top: 4rem;
   gap: 3rem;
   color: white;
+  align-items: flex-start;
 }
 
 .container {
@@ -80,12 +87,12 @@ main {
   margin: 1rem 0;
 }
 
-.textarea{
-    background: transparent;
-    height: fit-content;
+.textarea {
+  background: transparent;
+  height: fit-content;
 }
-.snippet{
-    padding: 1rem;
-    border-radius: .5rem;
-    background: #00000075;
+.snippet {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: #00000075;
 }
